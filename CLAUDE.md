@@ -78,6 +78,7 @@ version: v1.1.0 # x-release-please-version
 
 29. Create a GitHub Issue for the task. If creation is forbidden in this context, skip it.
 30. Work in a dedicated branch for the issue.
-31. Push and create a Pull Request. If creation is forbidden in this context, skip it.
-32. Watch PR events. Try to fix conflicts — a rebase can help.
-33. Wait for the user to merge the Pull Request.
+31. Never work on `main` branch. No commits, no pushes — always use a dedicated branch.
+32. Push and create a Pull Request. If creation is forbidden in this context, skip it.
+33. Watch PR events. Try to fix conflicts — a rebase can help.
+34. Wait for the user to merge the Pull Request.
