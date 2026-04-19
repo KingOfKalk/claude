@@ -77,8 +77,19 @@ version: v1.1.0 # x-release-please-version
 #### GitHub
 
 29. Create a GitHub Issue for the task. If creation is forbidden in this context, skip it.
-30. Work in a dedicated branch for the issue.
-31. Never work on `main` branch. No commits, no pushes — always use a dedicated branch.
-32. Push and create a Pull Request. If creation is forbidden in this context, skip it.
-33. Watch PR events. Try to fix conflicts — a rebase can help.
-34. Wait for the user to merge the Pull Request.
+30. Label issues and Pull Requests using existing labels. Do not create new labels.
+31. Work in a dedicated branch for the issue.
+32. Never work on `main` branch. No commits, no pushes — always use a dedicated branch.
+33. Push and create a Pull Request. If creation is forbidden in this context, skip it.
+34. Watch PR events. Try to fix conflicts — a rebase can help.
+35. Wait for the user to merge the Pull Request.
+
+##### Default Labels
+
+- `bug` – Something isn't working
+- `documentation` – Improvements or additions to documentation
+- `duplicate` – This issue or pull request already exists
+- `enhancement` – New feature or request
+- `invalid` – This doesn't seem right
+- `question` – Further information is requested
+- `wontfix` – This will not be worked on
