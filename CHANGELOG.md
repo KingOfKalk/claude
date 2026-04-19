@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/KingOfKalk/claude/compare/v1.2.0...v1.2.1) (2026-04-19)
+
+
+### Bug Fixes
+
+* **claude_code/web-env-setup:** clone without token ([#17](https://github.com/KingOfKalk/claude/issues/17)) ([a159796](https://github.com/KingOfKalk/claude/commit/a159796ac0da11f0a0128c29f80ea1043ce95840)), closes [#16](https://github.com/KingOfKalk/claude/issues/16)
+
 ## [1.2.0](https://github.com/KingOfKalk/claude/compare/v1.1.0...v1.2.0) (2026-04-19)
 
 
