@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/KingOfKalk/claude/compare/v1.2.1...v1.2.2) (2026-04-20)
+
+
+### Documentation
+
+* **rules:** restructure Development and Forge sections ([#19](https://github.com/KingOfKalk/claude/issues/19)) ([07a8709](https://github.com/KingOfKalk/claude/commit/07a87094a68736ca836f76b70ed2bde0aa32da0a))
+
 ## [1.2.1](https://github.com/KingOfKalk/claude/compare/v1.2.0...v1.2.1) (2026-04-19)
 
 
