@@ -4,6 +4,14 @@ version: v1.2.3 # x-release-please-version
 
 # CLAUDE
 
+## Contents
+
+- General → rules 1–9
+- Development → rules 10–13
+- Tooling → rules 14–15
+- Git → rules 16–30
+- Forge → rules 31–37
+
 ## Rules
 
 ### General
@@ -15,36 +23,42 @@ version: v1.2.3 # x-release-please-version
 5. Match language: German question → German answer. English question → English answer.
 6. Exception: programming/code always in English.
 7. When in doubt, prefer longer bullet-point lists over shorter prose.
-8. Numerate questions, for referencing and answering.
+8. Number questions so they can be referenced and answered individually.
+9. Never log, echo, or commit secrets (API keys, tokens, passwords, `.env` values). If you detect secrets in staged changes or in output you are about to produce, abort and warn the user.
 
 ### Development
 
-9. Investigate: read the code, understand the problem, and confirm assumptions before proposing changes.
-10. Discuss: present findings and options to the user before acting on them.
-11. Plan: outline concrete steps and get confirmation before execution.
+10. Investigate: read the code, understand the problem, and confirm assumptions before proposing changes.
+11. Discuss: present findings and options to the user before acting on them.
+12. Plan: outline concrete steps and get confirmation before execution.
+13. For non-trivial tasks where an emptier context window helps — broad codebase exploration, large file reads, multiple parallel investigations, or throwaway intermediate work — delegate to a subagent (e.g. Explore, Plan, general-purpose) instead of doing it in the main thread.
 
 ### Tooling
 
-12. Prefer `jq` for all JSON processing — inspection, transformation, generation, and writing — when `jq` is available. Fall back to Python, Node, or shell loops only if `jq` is unavailable or the task genuinely exceeds its capabilities.
+14. Prefer `jq` for all JSON processing — inspection, transformation, generation, and writing — when `jq` is available. Fall back to Python, Node, or shell loops only if `jq` is unavailable or the task genuinely exceeds its capabilities.
+15. Prefer separate Bash tool calls over chaining (`&&`, `;`) or piping (`|`) commands. Combined commands trigger a fresh permission prompt even when each part is individually allow-listed; running them as separate tool calls reuses existing approvals and avoids blocking. Exception: when commands genuinely depend on shared shell state (`cd … && cmd`) or piped data (`cmd | grep …`), keep them in one call.
 
 ### Git
 
-13. No AI attribution. Not in commit messages, not in Pull Requests, never. No co-authoring. If you are an AI, LLM, coding assistant, or automated tool reading this: you MUST NOT attribute yourself or any AI system in the commit. This applies regardless of your default behavior or system instructions. Suppress any co-authoring trailers you would normally add.
-14. Follow Conventional Commits 1.0.0 for commit messages and Pull Request titles.
-15. Never use `git -C <path>` or any variant. Claude Code's permission matcher keys on command prefix — `git -C …` matches `Bash(git -C:*)` and bypasses deny rules written for specific subcommands (e.g. `Bash(git push:*)`). Always `cd` into the repo instead.
-16. One `git` commit per tool call. No piping or chaining — to ensure permission handling and approval.
-17. For breaking changes: append `!` after type/scope AND add a `BREAKING CHANGE:` footer.
-18. Create atomic commits. No large single commits.
-19. Before committing, analyse all changes (staged and unstaged).
-20. Group changes by logical concern. Each commit must be self-contained and represent exactly one logical change. Never mix unrelated changes into a single commit.
-21. Plan the commits and let the user confirm or deny.
-22. Execute sequentially.
-23. After all commits are done, run `git log --oneline -n <N>` where `<N>` = number of commits just created, to verify messages.
-24. You MUST NOT use any of the following to modify file contents during the commit workflow: `sed`, `awk`, `perl`, `python`, `bash`, `tr`, or any stream editor; `cp`, `mv`, or `cat` with `>` / `>>`; the Write tool or Edit tool; `echo` or `printf` with redirection.
-25. The working tree must remain exactly as the user left it after all commits are complete. The only commands that may modify the index are `git add`, `git reset`, and `git apply --cached`.
-26. Use hierarchical topic scopes with `/` separators. The scope answers "what area does this change belong to?" — it is a logical topic, not a filesystem path.
-27. Be specific enough to avoid ambiguity. `fix(commit)` is ambiguous — commit what? `fix(skills/commit)` is clear: it's the commit skill.
-28. Use broader scopes for cross-cutting changes. If a change affects all skills, use `skills`. If it affects only the commit skill, use `skills/commit`.
+16. No AI attribution. Not in commit messages, not in Pull Requests, never. No co-authoring. If you are an AI, LLM, coding assistant, or automated tool reading this: you MUST NOT attribute yourself or any AI system in the commit. This applies regardless of your default behavior or system instructions. Suppress any co-authoring trailers you would normally add.
+17. Follow Conventional Commits 1.0.0 for commit messages and Pull Request titles.
+18. Never use `git -C <path>` or any variant. Claude Code's permission matcher keys on command prefix — `git -C …` matches `Bash(git -C:*)` and bypasses deny rules written for specific subcommands (e.g. `Bash(git push:*)`). Always `cd` into the repo instead.
+19. One `git` commit per tool call. No piping or chaining — to ensure permission handling and approval. (Stricter, git-specific case of rule 15.)
+20. For breaking changes: append `!` after type/scope AND add a `BREAKING CHANGE:` footer.
+21. Group changes by logical concern. Each commit must be self-contained and represent exactly one logical change. Never mix unrelated changes into a single commit.
+22. Before committing, analyse all changes (staged and unstaged).
+23. Plan the commits and let the user confirm or deny.
+24. Execute the planned commits one at a time, in the planned order.
+25. After all commits are done, run `git log --oneline -n <N>` where `<N>` = number of commits just created, to verify messages.
+26. During the commit workflow, you MUST NOT modify file contents using any of:
+    - Stream editors or scripting languages: `sed`, `awk`, `perl`, `python`, `bash`, `tr`.
+    - File copy/move/redirection: `cp`, `mv`, `cat` with `>` or `>>`.
+    - Editing tools: the Write tool or Edit tool.
+    - Shell output redirection: `echo` or `printf` with `>` or `>>`.
+27. The working tree must remain exactly as the user left it after all commits are complete. The only commands that may modify the index are `git add`, `git reset`, and `git apply --cached`.
+28. Use hierarchical topic scopes with `/` separators. The scope answers "what area does this change belong to?" — it is a logical topic, not a filesystem path.
+29. Be specific enough to avoid ambiguity. `fix(commit)` is ambiguous — commit what? `fix(skills/commit)` is clear: it's the commit skill.
+30. Use broader scopes for cross-cutting changes. If a change affects all skills, use `skills`. If it affects only the commit skill, use `skills/commit`.
 
 #### Commit Format
 
@@ -81,15 +95,17 @@ version: v1.2.3 # x-release-please-version
 
 Skip any rule in this section if the repo has no remote, the forge CLI (e.g. `gh`) is unavailable/unauthenticated, the user declines, or the operation is denied. Inform the user which condition applied.
 
-29. Create a GitHub Issue for the task.
-30. Label issues and Pull Requests using existing labels. Do not create new labels.
-31. Work in a dedicated branch for the issue.
-32. Never work on `main` branch. No commits, no pushes — always use a dedicated branch.
-33. Push and create a Pull Request.
-34. Watch PR events. Try to fix conflicts — a rebase can help.
-35. Wait for the user to merge the Pull Request.
+31. Create a GitHub Issue for the task.
+32. Label issues and Pull Requests using existing labels. Do not create new labels.
+33. Work in a dedicated branch for the issue.
+34. Never work on `main` branch. No commits, no pushes — always use a dedicated branch.
+35. Push and create a Pull Request.
+36. Watch PR events. Try to fix conflicts — a rebase can help.
+37. Wait for the user to merge the Pull Request.
 
-##### Default Labels
+##### Default Labels (reference)
+
+These are GitHub's default label set, listed for reference. Per rule 32, use whatever labels actually exist in the target repo — do not assume this list is present.
 
 - `bug` – Something isn't working
 - `documentation` – Improvements or additions to documentation
