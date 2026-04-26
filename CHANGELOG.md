@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.4](https://github.com/KingOfKalk/claude/compare/v1.2.3...v1.2.4) (2026-04-26)
+
+
+### Documentation
+
+* **rules:** apply audit-driven improvements ([#25](https://github.com/KingOfKalk/claude/issues/25)) ([d16515b](https://github.com/KingOfKalk/claude/commit/d16515b4fd72238fac5b44e8bbfa5524022f6259))
+* **rules:** refine Forge workflow and reorganize Git section ([#28](https://github.com/KingOfKalk/claude/issues/28)) ([b615039](https://github.com/KingOfKalk/claude/commit/b6150390cc7ae2ee4bf37b8764a6668c1ddc6177))
+
 ## [1.2.3](https://github.com/KingOfKalk/claude/compare/v1.2.2...v1.2.3) (2026-04-21)
 
 
