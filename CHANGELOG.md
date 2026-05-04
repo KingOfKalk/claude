@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.5](https://github.com/KingOfKalk/claude/compare/v1.2.4...v1.2.5) (2026-05-04)
+
+
+### Documentation
+
+* **rules:** forbid PRs and issues targeting non-origin remotes ([616df5d](https://github.com/KingOfKalk/claude/commit/616df5de60450111bacaa5b7ef0a107452638975))
+
 ## [1.2.4](https://github.com/KingOfKalk/claude/compare/v1.2.3...v1.2.4) (2026-04-26)
 
 
