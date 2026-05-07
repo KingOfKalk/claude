@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.6](https://github.com/KingOfKalk/claude/compare/v1.2.5...v1.2.6) (2026-05-07)
+
+
+### Documentation
+
+* **rules:** promote Forge heading to match TOC depth ([#31](https://github.com/KingOfKalk/claude/issues/31)) ([60e696d](https://github.com/KingOfKalk/claude/commit/60e696d61b37bd3429efc298c99f25db82b4cdc9)), closes [#30](https://github.com/KingOfKalk/claude/issues/30)
+
 ## [1.2.5](https://github.com/KingOfKalk/claude/compare/v1.2.4...v1.2.5) (2026-05-04)
 
 
