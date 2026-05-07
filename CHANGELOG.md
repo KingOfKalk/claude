@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.7](https://github.com/KingOfKalk/claude/compare/v1.2.6...v1.2.7) (2026-05-07)
+
+
+### Documentation
+
+* **rules:** tighten rule 41 wording ([#34](https://github.com/KingOfKalk/claude/issues/34)) ([811b72f](https://github.com/KingOfKalk/claude/commit/811b72f24797a880c1da26fc1054f77e7905416a)), closes [#33](https://github.com/KingOfKalk/claude/issues/33)
+
 ## [1.2.6](https://github.com/KingOfKalk/claude/compare/v1.2.5...v1.2.6) (2026-05-07)
 
 
