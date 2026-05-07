@@ -91,7 +91,7 @@ version: v1.2.5 # x-release-please-version
 - `chore` – other changes that don't modify src or test files
 - `revert` – reverts a previous commit
 
-#### Forge (GitHub / GitLab / etc.)
+### Forge (GitHub / GitLab / etc.)
 
 Skip any rule in this section if the repo has no remote, the forge CLI (e.g. `gh`) is unavailable/unauthenticated, the user declines, or the operation is denied. Inform the user which condition applied.
 
@@ -112,7 +112,7 @@ Skip any rule in this section if the repo has no remote, the forge CLI (e.g. `gh
 42. Wait for the user to merge the Pull Request.
 43. Only ever create Issues, Pull Requests, or push to `origin`. Never target any other remote (e.g. `upstream`) or any third-party repository (e.g. the parent project of a plugin or extension) unless the user explicitly instructs it.
 
-##### Default Labels (reference)
+#### Default Labels (reference)
 
 These are GitHub's default label set, listed for reference. Use whatever labels actually exist in the target repo — do not assume this list is present (per rule 32).
 
