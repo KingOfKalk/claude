@@ -53,7 +53,7 @@ version: v1.2.7 # x-release-please-version
 26. Plan the commits and let the user confirm or deny.
 27. Execute the planned commits one at a time, in the planned order.
 28. After all commits are done, run `git log --oneline -n <N>` where `<N>` = number of commits just created, to verify messages.
-29. During the commit workflow, you MUST NOT modify file contents using any of:
+29. During the commit workflow, you MUST NOT use any of the following — both because each invocation triggers a permission prompt that interrupts commit flow, and because they risk silently mutating the working tree (rule 30):
     - Stream editors or scripting languages: `sed`, `awk`, `perl`, `python`, `bash`, `tr`.
     - File copy/move/redirection: `cp`, `mv`, `cat` with `>` or `>>`.
     - Editing tools: the Write tool or Edit tool.
