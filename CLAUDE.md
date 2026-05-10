@@ -1,5 +1,5 @@
 ---
-version: v1.2.7 # x-release-please-version
+version: v1.2.8 # x-release-please-version
 ---
 
 # CLAUDE
