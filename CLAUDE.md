@@ -108,7 +108,7 @@ Skip any rule in this section if the repo has no remote, the forge CLI (e.g. `gh
     - `Closes #<issue-number>` so the issue auto-closes on merge.
     - A short **Summary** section (1–3 bullets: what changed and why).
     - A **Test plan** section listing how the change was verified, if applicable (omit for pure docs/typo changes).
-41. After opening the PR, monitor CI checks and review feedback. Resolve merge conflicts by rebasing onto the base branch.
+41. After opening the PR, monitor CI checks (`gh pr checks`) and review feedback (`gh pr view --comments`). Resolve merge conflicts by rebasing onto the base branch.
 42. Wait for the user to merge the Pull Request.
 43. Only ever create Issues, Pull Requests, or push to `origin`. Never target any other remote (e.g. `upstream`) or any third-party repository (e.g. the parent project of a plugin or extension) unless the user explicitly instructs it.
 
