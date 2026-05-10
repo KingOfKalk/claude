@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.8](https://github.com/KingOfKalk/claude/compare/v1.2.7...v1.2.8) (2026-05-10)
+
+
+### Documentation
+
+* **rules:** explain rule 29 prohibition and broaden scope ([01643ab](https://github.com/KingOfKalk/claude/commit/01643abc43d0ea50a439e2af74903bbccadcaec9))
+* **rules:** name concrete gh commands in rule 41 ([13c5954](https://github.com/KingOfKalk/claude/commit/13c5954a9dbb1518ec0fca0531e25bd84604625c))
+
 ## [1.2.7](https://github.com/KingOfKalk/claude/compare/v1.2.6...v1.2.7) (2026-05-07)
 
 
