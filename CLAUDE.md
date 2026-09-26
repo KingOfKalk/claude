@@ -22,7 +22,7 @@ version: v1.2.8 # x-release-please-version
 4. For research or factual claims: add sources/links. Not required for code changes, commit messages, or PR descriptions.
 5. Match language: German question → German answer. English question → English answer.
 6. Exception: programming/code always in English.
-7. When in doubt, prefer longer bullet-point lists over shorter prose.
+7. Default short; expand into longer bullet lists only when the topic has many discrete points.
 8. Number questions so they can be referenced and answered individually.
 9. Never log, echo, or commit secrets (API keys, tokens, passwords, `.env` values). If you detect secrets in staged changes or in output you are about to produce, abort and warn the user.
 
