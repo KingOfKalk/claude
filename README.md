@@ -3,6 +3,15 @@
 My very basic Claude setup.
 See [CLAUDE.md](CLAUDE.md).
 
+CLAUDE.md holds only always-on preferences and a few hard git guardrails.
+The commit and issue/PR workflow lives in the `git` plugin of
+[KingOfKalk/claude-code-plugins](https://github.com/KingOfKalk/claude-code-plugins):
+
+```text
+/plugin marketplace add KingOfKalk/claude-code-plugins
+/plugin install git@kingofkalk-claude-code-plugins
+```
+
 ## Claude Code
 
 A script to ensure the web environments have my CLAUDE.md as well system wide.
