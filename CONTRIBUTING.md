@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for your interest. This repo follows a tight, issue-driven workflow. The full ruleset lives in [CLAUDE.md](CLAUDE.md); this doc is the short version for contributors.
+Thanks for your interest. This repo follows a tight, issue-driven workflow. Always-on rules live in [CLAUDE.md](CLAUDE.md); the full commit and issue/PR workflow lives in the `git` plugin of [KingOfKalk/claude-code-plugins](https://github.com/KingOfKalk/claude-code-plugins). This doc is the short version for contributors.
 
 ## Before You Start
 
@@ -16,7 +16,7 @@ Thanks for your interest. This repo follows a tight, issue-driven workflow. The 
 ## Commits
 
 - Follow [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/).
-- See [CLAUDE.md](CLAUDE.md) for allowed `types`, scope conventions, and the breaking-change format.
+- Allowed `types`, scope conventions, and the breaking-change format are defined by the `git` plugin.
 - Atomic: one logical concern per commit. Don't mix unrelated changes.
 - No AI attribution or co-authoring trailers.
 
