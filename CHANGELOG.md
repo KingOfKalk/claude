@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/KingOfKalk/claude/compare/v1.2.8...v2.0.0) (2026-09-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* **rules:** the commit workflow (old rules 17-21, 23-30), the forge workflow (old rules 31-35, 37-42), Commit Format, Scope Examples, Types, and Default Labels were removed from CLAUDE.md. They moved to the git plugin (git@kingofkalk-claude-code-plugins). Old rules 22, 36 and 43 are now rules 17, 18 and 19.
+
+### Features
+
+* **rules:** delegate git and forge workflow to git plugin ([#38](https://github.com/KingOfKalk/claude/issues/38)) ([e371297](https://github.com/KingOfKalk/claude/commit/e37129709487ecf5892203f14ad2b1c1c389a269))
+
 ## [1.2.8](https://github.com/KingOfKalk/claude/compare/v1.2.7...v1.2.8) (2026-05-10)
 
 
