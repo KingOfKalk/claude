@@ -4,13 +4,9 @@ My very basic Claude setup.
 See [CLAUDE.md](CLAUDE.md).
 
 CLAUDE.md holds only always-on preferences and a few hard git guardrails.
-The commit and issue/PR workflow lives in the `git` plugin of
-[KingOfKalk/claude-code-plugins](https://github.com/KingOfKalk/claude-code-plugins):
-
-```text
-/plugin marketplace add KingOfKalk/claude-code-plugins
-/plugin install git@kingofkalk-claude-code-plugins
-```
+The commit and issue/PR workflow is defined per repository in its `CONTRIBUTING.md`
+(this repo: [CONTRIBUTING.md](CONTRIBUTING.md), based on
+[Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/)).
 
 ## Claude Code
 
