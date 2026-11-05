@@ -32,7 +32,7 @@ Thanks for your interest. This repo follows a tight, issue-driven workflow. Alwa
   - `chore` — maintenance, no production code change
   - `revert` — revert a previous commit
 - Scope: optional, lowercase, hierarchical with `/` separators. It names the logical area, not a file path.
-  - Be specific: `rules/general`, `claude_code/web-env-setup`.
+  - Be specific: `rules/general`, `rules/git-workflow`.
   - Use a broader scope for cross-cutting changes: `rules`.
 - Description: imperative mood, lowercase, no trailing period.
 - Body: reference the issue with `Refs #<issue-number>` (if one exists).

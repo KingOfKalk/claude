@@ -8,10 +8,14 @@ The commit and issue/PR workflow is defined per repository in its `CONTRIBUTING.
 (this repo: [CONTRIBUTING.md](CONTRIBUTING.md), based on
 [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/)).
 
-## Claude Code
+## Install
 
-A script to ensure the web environments have my CLAUDE.md as well system wide.
-See [web_env_setup.sh](./claude_code/web_env_setup.sh).
+Clone and run `install.sh`
+
+```bash
+git clone https://github.com/KingOfKalk/claude.git
+claude/install.sh
+```
 
 ## Prevent Sleep During Long Claude Sessions
 
