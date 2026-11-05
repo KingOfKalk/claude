@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/KingOfKalk/claude/compare/v2.0.0...v3.0.0) (2026-11-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* **install:** claude_code/web_env_setup.sh is removed; clone the repository and run install.sh instead.
+
+### Features
+
+* **install:** replace web env setup script with install.sh ([#42](https://github.com/KingOfKalk/claude/issues/42)) ([8662843](https://github.com/KingOfKalk/claude/commit/8662843b128d7a6a6d98c6750b052ac0f4cb309c))
+
 ## [2.0.0](https://github.com/KingOfKalk/claude/compare/v1.2.8...v2.0.0) (2026-11-05)
 
 
